@@ -47,4 +47,32 @@ public class BaseballNumbers {
             throw new IllegalArgumentException("서로 다른 숫자를 입력해야 합니다.");
         }
     }
+
+    public GameResult compare(BaseballNumbers other) {
+        int strike = countStrike(other);
+        int ball = countBall(other);
+        return new GameResult(strike, ball);
+    }
+
+    private int countStrike(BaseballNumbers other) {
+        int count = 0;
+        for (int i = 0; i < SIZE; i++) {
+            // ★1: 내 i번째 숫자와 other의 i번째 숫자가 같으면 count++
+            if(numbers.get(i).equals(other.numbers.get(i))) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    private int countBall(BaseballNumbers other) {
+        int count = 0;
+        for (int i = 0; i < SIZE; i++) {
+            int target = other.numbers.get(i);
+            if (numbers.contains(target) && !numbers.get(i).equals(target)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
