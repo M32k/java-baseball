@@ -3,12 +3,12 @@ package baseball.domain;
 public class GameResult {
 
     private static final int THREE_STRIKE = 3;
-
-    private final int strike;
-    private final int ball;
     private static final String NOTHING = "낫싱";
     private static final String STRIKE = "스트라이크";
     private static final String BALL = "볼";
+
+    private final int strike;
+    private final int ball;
 
     public GameResult(int strike, int ball) {
         this.strike = strike;
@@ -34,8 +34,8 @@ public class GameResult {
         if (ball == 0) {
             return strike + STRIKE;
         }
-        // ★1: strike가 0이면 → 볼 개수 + BALL 을 return
-        if(strike == 0) {
+
+        if (strike == 0) {
             return ball + BALL;
         }
 

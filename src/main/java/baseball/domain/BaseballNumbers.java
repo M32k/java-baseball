@@ -28,7 +28,7 @@ public class BaseballNumbers {
 
     private void validateRange(String input) {
         for (char c : input.toCharArray()) {
-            if(c < '1' || c > '9'){
+            if (c < '1' || c > '9') {
                 throw new IllegalArgumentException("1부터 9 사이의 숫자만 입력할 수 있습니다.");
             }
         }
@@ -58,7 +58,7 @@ public class BaseballNumbers {
         int count = 0;
         for (int i = 0; i < SIZE; i++) {
 
-            if(numbers.get(i).equals(other.numbers.get(i))) {
+            if (numbers.get(i).equals(other.numbers.get(i))) {
                 count++;
             }
         }
