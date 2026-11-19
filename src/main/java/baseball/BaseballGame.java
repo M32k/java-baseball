@@ -38,15 +38,13 @@ public class BaseballGame {
 
     private boolean askRestart() {
         String input = InputView.readRestart();
-        // ★: input이 RESTART("1")와 같으면 true를 return
-        //    input이 QUIT("2")와 같으면 false를 return
-        //    둘 다 아니면 IllegalArgumentException을 던진다
+
         if (RESTART.equals(input)) {
             return true;
         }
         if (QUIT.equals(input)) {
             return false;
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException("1 또는 2를 입력해야 합니다.");
     }
 }

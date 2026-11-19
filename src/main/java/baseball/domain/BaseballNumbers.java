@@ -57,7 +57,7 @@ public class BaseballNumbers {
     private int countStrike(BaseballNumbers other) {
         int count = 0;
         for (int i = 0; i < SIZE; i++) {
-            // ★1: 내 i번째 숫자와 other의 i번째 숫자가 같으면 count++
+
             if(numbers.get(i).equals(other.numbers.get(i))) {
                 count++;
             }

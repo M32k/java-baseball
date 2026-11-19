@@ -39,8 +39,6 @@ public class GameResult {
             return ball + BALL;
         }
 
-        // ★2: 위에 다 안 걸리면(둘 다 있음) → "1볼 1스트라이크" 모양으로 return
-        //     힌트: ball + BALL + " " + strike + STRIKE
         return ball + BALL + " " + strike + STRIKE;
     }
 
